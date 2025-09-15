@@ -28,3 +28,9 @@ It demonstrates how to collect, analyze, and visualize security events using Azu
   SecurityEvent
   | where EventID == 4625
   | summarize Count = count() by Account, Computer
+
+  - **Successful logins**  
+  ```kql
+  SecurityEvent
+  | where EventID == 4624
+  | summarize Count = count() by Account, Computer
